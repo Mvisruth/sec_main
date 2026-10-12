@@ -16,12 +16,12 @@ import "./globals.css";
 // ── Page Metadata ──
 // This sets the browser tab title and the description for search engines
 export const metadata = {
-  title: "Local Network",
-  description: "Encrypted, ephemeral group chat over the local network.",
+  title: "SEC",
+  description: "Secure, end-to-end encrypted ephemeral group chat.",
   icons: {
-    icon: "/image.png",
-    shortcut: "/image.png",
-    apple: "/image.png",
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 

@@ -1,6 +1,6 @@
-# Local Network Chat
+# SEC - Secure Ephemeral Chat
 
-A **real-time, end-to-end encrypted group chat application** designed for local networks (LAN / Wi-Fi). Messages are encrypted directly in the browser and auto-delete after 5 minutes. The server operates strictly as an in-memory relay and never has access to plaintext messages or encryption keys.
+A **real-time, end-to-end encrypted group chat application**. Messages are encrypted directly in the browser and auto-delete after 5 minutes. The server operates strictly as an in-memory relay and never has access to plaintext messages or encryption keys.
 
 ---
 
@@ -63,7 +63,19 @@ npm run dev
 ```
 The server will start on port `4000` (listening on `0.0.0.0:4000`).
 
-### 3. Start the Web Client
+### 3. Configure Frontend Environment (Optional for local dev)
+
+If you are using a deployed backend (e.g., on Render), create a `.env.local` file inside `web/`:
+```bash
+cd web
+cp .env.example .env.local
+```
+Set your backend URL:
+```env
+NEXT_PUBLIC_SERVER_URL=https://your-backend.onrender.com
+```
+
+### 4. Start the Web Client
 
 ```bash
 cd web
@@ -71,7 +83,7 @@ npm run dev
 ```
 The client will start on port `3000` (listening on `0.0.0.0:3000`).
 
-### 4. Open and Chat
+### 5. Open and Chat
 
 - **On your machine:** Visit `http://localhost:3000`
 - **From another device on your network:** Visit `http://<your-computer-ip>:3000`

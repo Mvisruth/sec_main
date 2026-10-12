@@ -420,17 +420,11 @@ export default function Home() {
   // =============================================
   return (
     <div className="shell">
-      {/* ── Header ── */}
       <header className="header">
         <div className="header-left">
-          {/* WiFi icon */}
-          <svg className="wifi-svg" viewBox="0 0 24 24" fill="none">
-            <path d="M5 12.55a11 11 0 0 1 14.08 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M1.42 9a16 16 0 0 1 21.16 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <path d="M8.53 16.11a6 6 0 0 1 6.95 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            <circle cx="12" cy="20" r="1" fill="currentColor" />
-          </svg>
-          <span className="header-title">Local Network</span>
+          {/* SEC Logo */}
+          <img src="/logo.png" alt="SEC Logo" className="header-logo" width={26} height={26} />
+          <span className="header-title">SEC</span>
         </div>
 
         {/* Online user count badge */}

@@ -22,17 +22,15 @@ import { io } from "socket.io-client";
 
 // ── Server URL ─────────────────────────────────
 //
-// This is the deployed Node.js + Socket.IO backend.
-const SERVER_URL = "https://local-network-chat-server.onrender.com";
+// Reads the deployed Node.js + Socket.IO backend URL from the environment variable.
+// Keeping it in .env / .env.local prevents exposing the URL in Git / GitHub repositories.
+const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || "";
 
 // ── getServerUrl ───────────────────────────────
 //
 // Returns the backend URL.
-//
-// We don't need to check window.location here because
-// the backend is now deployed separately on Render.
 export function getServerUrl() {
-  return SERVER_URL;
+  return process.env.NEXT_PUBLIC_SERVER_URL || SERVER_URL;
 }
 
 // ── Singleton Socket ───────────────────────────

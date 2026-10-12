@@ -91,6 +91,14 @@ body {
   gap: 10px;
 }
 
+/* Header Logo */
+.header-logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
 /* Wifi SVG */
 .wifi-svg {
   width: 22px;
@@ -102,7 +110,7 @@ body {
 .header-title {
   font-size: 19px;
   font-weight: 700;
-  color: var(--blue);
+  color: #00A861;
   letter-spacing: -.3px;
 }
 
