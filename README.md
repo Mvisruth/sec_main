@@ -72,7 +72,7 @@ cp .env.example .env.local
 ```
 Set your backend URL:
 ```env
-NEXT_PUBLIC_SERVER_URL=https://your-backend.onrender.com
+SERVER_URL=https://your-backend.onrender.com
 ```
 
 ### 4. Start the Web Client

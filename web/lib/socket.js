@@ -24,13 +24,13 @@ import { io } from "socket.io-client";
 //
 // Reads the deployed Node.js + Socket.IO backend URL from the environment variable.
 // Keeping it in .env / .env.local prevents exposing the URL in Git / GitHub repositories.
-const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL || "";
+const SERVER_URL = process.env.SERVER_URL || process.env.NEXT_PUBLIC_SERVER_URL || "";
 
 // ── getServerUrl ───────────────────────────────
 //
 // Returns the backend URL.
 export function getServerUrl() {
-  return process.env.NEXT_PUBLIC_SERVER_URL || SERVER_URL;
+  return process.env.SERVER_URL || process.env.NEXT_PUBLIC_SERVER_URL || SERVER_URL;
 }
 
 // ── Singleton Socket ───────────────────────────
