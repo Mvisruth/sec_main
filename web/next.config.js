@@ -21,6 +21,15 @@ const nextConfig = {
   // Strict mode catches common React bugs during development
   reactStrictMode: true,
 
+  webpack: (config, { webpack }) => {
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        "process.env.SERVER_URL": JSON.stringify(process.env.SERVER_URL),
+      })
+    );
+    return config;
+  },
+
   // Allow these IP address patterns to access the dev server
   allowedDevOrigins: [
     "192.168.31.56",    // A specific device (you can remove this)
